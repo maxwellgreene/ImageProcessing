@@ -1,12 +1,12 @@
-%close all;
+close all;
 clear all;
 mark = 1;
 duration = 20;
 
 %Thresholds
-backDif    = 5; %Background difference
+backDif    = 10; %Background difference
 noiseSize  = 4; %Size of particles to keep
-medFiltRad = 4; %Radius to evaluate median filter
+medFiltRad = 10; %Radius to evaluate median filter
 skelSize   = 8; %Size to evaluate skeleton
 
 video = VideoReader('Data/Movie2.mp4');

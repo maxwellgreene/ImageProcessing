@@ -1,17 +1,17 @@
-%close all;
+close all;
 clear all;
 mark = 1;
 
 %Thresholds
-backDif    = 40; %Background difference
+backDif    = 100; %Background difference
 noiseSize  = 5; %Size of particles to keep
-medFiltRad = 10; %Radius to evaluate median filter
-skelSize   = 15; %Size to evaluate skeleton
+medFiltRad = 5; %Radius to evaluate median filter
+skelSize   = 50; %Size to evaluate skeleton
 
 video = VideoReader('Data/ant3.mp4');
 background = imread('Data/ant3back.jpg');
 numFrames = ceil(video.FrameRate*video.Duration);
-duration = 5;
+duration = 10;
 
 endpoints = zeros(9,2,duration);
 
